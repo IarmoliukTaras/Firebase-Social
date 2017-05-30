@@ -13,6 +13,10 @@
 		9D7E17C71EDD4C39008DF56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7E17C61EDD4C39008DF56F /* Assets.xcassets */; };
 		9D7E17CA1EDD4C39008DF56F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D7E17C81EDD4C39008DF56F /* LaunchScreen.storyboard */; };
 		9D7E17D21EDD4C89008DF56F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D7E17D11EDD4C89008DF56F /* GoogleService-Info.plist */; };
+		9D7E17D71EDD6359008DF56F /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17D61EDD6359008DF56F /* FancyView.swift */; };
+		9D7E17D91EDD65DF008DF56F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17D81EDD65DF008DF56F /* RoundButton.swift */; };
+		9D7E17DB1EDD6757008DF56F /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17DA1EDD6757008DF56F /* FancyTextField.swift */; };
+		9D7E17DD1EDD6D49008DF56F /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17DC1EDD6D49008DF56F /* FancyButton.swift */; };
 		B1C927FBF9F6C84ACF367916 /* Pods_FirebaseSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2779640A34A80BC38E017D2C /* Pods_FirebaseSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,10 @@
 		9D7E17C91EDD4C39008DF56F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D7E17CB1EDD4C39008DF56F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D7E17D11EDD4C89008DF56F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D7E17D61EDD6359008DF56F /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		9D7E17D81EDD65DF008DF56F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		9D7E17DA1EDD6757008DF56F /* FancyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
+		9D7E17DC1EDD6D49008DF56F /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,10 @@
 		9D7E17D41EDD4D50008DF56F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D7E17D61EDD6359008DF56F /* FancyView.swift */,
+				9D7E17D81EDD65DF008DF56F /* RoundButton.swift */,
+				9D7E17DA1EDD6757008DF56F /* FancyTextField.swift */,
+				9D7E17DC1EDD6D49008DF56F /* FancyButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,8 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7E17D91EDD65DF008DF56F /* RoundButton.swift in Sources */,
+				9D7E17DB1EDD6757008DF56F /* FancyTextField.swift in Sources */,
 				9D7E17C21EDD4C39008DF56F /* SignInVC.swift in Sources */,
+				9D7E17DD1EDD6D49008DF56F /* FancyButton.swift in Sources */,
 				9D7E17C01EDD4C39008DF56F /* AppDelegate.swift in Sources */,
+				9D7E17D71EDD6359008DF56F /* FancyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
