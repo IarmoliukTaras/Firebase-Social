@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SignInVC.viewDidLoad() -&gt; ():SignInVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "performSegue(withIdentifier: &quot;feedVC&quot;, sender: &quot;some text&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

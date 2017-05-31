@@ -17,6 +17,7 @@
 		9D7E17D91EDD65DF008DF56F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17D81EDD65DF008DF56F /* RoundButton.swift */; };
 		9D7E17DB1EDD6757008DF56F /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17DA1EDD6757008DF56F /* FancyTextField.swift */; };
 		9D7E17DD1EDD6D49008DF56F /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17DC1EDD6D49008DF56F /* FancyButton.swift */; };
+		9D7E17E11EDEEB14008DF56F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E17E01EDEEB14008DF56F /* FeedVC.swift */; };
 		B1C927FBF9F6C84ACF367916 /* Pods_FirebaseSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2779640A34A80BC38E017D2C /* Pods_FirebaseSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		9D7E17D81EDD65DF008DF56F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		9D7E17DA1EDD6757008DF56F /* FancyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
 		9D7E17DC1EDD6D49008DF56F /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		9D7E17E01EDEEB14008DF56F /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				9D7E17C11EDD4C39008DF56F /* SignInVC.swift */,
+				9D7E17E01EDEEB14008DF56F /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7E17D91EDD65DF008DF56F /* RoundButton.swift in Sources */,
+				9D7E17E11EDEEB14008DF56F /* FeedVC.swift in Sources */,
 				9D7E17DB1EDD6757008DF56F /* FancyTextField.swift in Sources */,
 				9D7E17C21EDD4C39008DF56F /* SignInVC.swift in Sources */,
 				9D7E17DD1EDD6D49008DF56F /* FancyButton.swift in Sources */,
