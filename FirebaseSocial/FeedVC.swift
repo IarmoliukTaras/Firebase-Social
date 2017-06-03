@@ -14,6 +14,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let KEY_UID = "uid"
     override func viewDidLoad() {
         super.viewDidLoad()
+        DataService.ds.postsRef.observe(.value, with: {(snapshot) in
+            print(snapshot.value)
+        })
 
         // Do any additional setup after loading the view.
     }
