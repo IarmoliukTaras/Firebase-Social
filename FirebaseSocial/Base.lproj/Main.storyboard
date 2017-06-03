@@ -350,6 +350,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="postTable" destination="XWP-X5-NKB" id="jXy-wH-2q2"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="signInVC" id="gVi-Ui-wki"/>
                     </connections>
                 </viewController>
