@@ -40,16 +40,19 @@ class SignInVC: UIViewController {
             } else {
                 print("JESS: Successfully authenticated with Firebase")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
             
         })
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: self.KEY_UID)
         print("DATA saved to keychain - \(keychainResult)")
+        performSegue(withIdentifier: "feedVC", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -58,7 +61,7 @@ class SignInVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
-            performSegue(withIdentifier: "feedVC", sender: "some text")
+            performSegue(withIdentifier: "feedVC", sender: nil)
         }
     }
 
@@ -73,7 +76,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("User signed in with Email")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: email, completion: { (user, error) in
@@ -82,7 +86,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("User created and authenticated with Email")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })

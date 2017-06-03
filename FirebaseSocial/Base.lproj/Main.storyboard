@@ -154,13 +154,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePx-EL-bwG" customClass="FancyView" customModule="FirebaseSocial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="9OV-0R-s6Q">
-                                        <rect key="frame" x="8" y="20" width="45" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="YUF-iN-hSP"/>
-                                            <constraint firstAttribute="width" constant="45" id="bUA-jq-7rn"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiU-UO-q26">
                                         <rect key="frame" x="157.5" y="15" width="60" height="34.5"/>
                                         <constraints>
@@ -171,13 +164,24 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlX-Ca-Apa">
+                                        <rect key="frame" x="10" y="12.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="UPl-gN-7sp"/>
+                                            <constraint firstAttribute="height" constant="40" id="qHw-ad-uwP"/>
+                                        </constraints>
+                                        <state key="normal" image="sign-out"/>
+                                        <connections>
+                                            <action selector="signOutButtonPressed:" destination="hzb-a2-6FQ" eventType="touchUpInside" id="bWc-xU-GeS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.35552805662155151" green="0.7842298150062561" blue="0.86525684595108032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="9OV-0R-s6Q" firstAttribute="top" secondItem="ePx-EL-bwG" secondAttribute="top" constant="20" id="3Ze-7o-JYX"/>
+                                    <constraint firstItem="MlX-Ca-Apa" firstAttribute="centerY" secondItem="ePx-EL-bwG" secondAttribute="centerY" id="9XS-cB-siX"/>
                                     <constraint firstAttribute="height" constant="65" id="CUa-uY-LMH"/>
-                                    <constraint firstItem="9OV-0R-s6Q" firstAttribute="leading" secondItem="ePx-EL-bwG" secondAttribute="leading" constant="8" id="OaZ-ZO-Gri"/>
                                     <constraint firstItem="PiU-UO-q26" firstAttribute="centerY" secondItem="ePx-EL-bwG" secondAttribute="centerY" id="e1B-QS-DPW"/>
+                                    <constraint firstItem="MlX-Ca-Apa" firstAttribute="leading" secondItem="ePx-EL-bwG" secondAttribute="leading" constant="10" id="scQ-U7-xfz"/>
                                     <constraint firstItem="PiU-UO-q26" firstAttribute="centerX" secondItem="ePx-EL-bwG" secondAttribute="centerX" id="w5g-VL-eON"/>
                                 </constraints>
                             </view>
