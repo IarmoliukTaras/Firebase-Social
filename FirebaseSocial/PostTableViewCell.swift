@@ -15,11 +15,20 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!
+    
+    var post: Post!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    
+    func configureCell(post: Post) {
+        self.post = post
+        self.postTextView.text = post.caption
+        self.likesLabel.text = String(post.likes)
+        
+    }
 
 }

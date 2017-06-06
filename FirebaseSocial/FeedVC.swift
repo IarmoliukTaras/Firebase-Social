@@ -21,8 +21,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         DataService.ds.postsRef.observe(.value, with: {(snapshot) in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
-                    print(snap)
-                    
                     if let postDir = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post.init(postKey: key, postData: postDir)
@@ -52,6 +50,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostTableViewCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostTableViewCell {
+            cell.configureCell(post: posts[indexPath.row])
+            return cell
+        } else {
+            return PostTableViewCell()
+        }
     }
 }
