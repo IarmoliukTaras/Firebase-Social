@@ -12,8 +12,9 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import SwiftKeychainWrapper
 
+let KEY_UID = "uid"
+
 class SignInVC: UIViewController {
-    let KEY_UID = "uid"
 
     @IBOutlet weak var emailTextField: FancyTextField!
     @IBOutlet weak var passwordTextField: FancyTextField!
@@ -50,7 +51,7 @@ class SignInVC: UIViewController {
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseUser(uid: id, userData: userData)
-        let keychainResult = KeychainWrapper.standard.set(id, forKey: self.KEY_UID)
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("DATA saved to keychain - \(keychainResult)")
         performSegue(withIdentifier: "feedVC", sender: nil)
     }

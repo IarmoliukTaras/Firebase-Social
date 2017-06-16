@@ -8,26 +8,49 @@
 
 import UIKit
 import Firebase
-class PostTableViewCell: UITableViewCell {
-    @IBOutlet weak var profileImage: CircleImageView!
 
+class PostTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var profileImage: CircleImageView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var likeImage: UIImageView!
     
     var post: Post!
+    var likesRef: FIRDatabaseReference!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeTapped))
+        tap.numberOfTapsRequired = 1
+        likeImage.addGestureRecognizer(tap)
+        likeImage.isUserInteractionEnabled = true
+    }
+    
+    func likeTapped(sender: UITapGestureRecognizer) {
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+                self.likeImage.image = #imageLiteral(resourceName: "filled-heart")
+                self.post.addLike(isAdd: true)
+                self.likesRef.setValue(true)
+            } else {
+                self.likeImage.image = #imageLiteral(resourceName: "empty-heart")
+                self.post.addLike(isAdd: false)
+                self.likesRef.removeValue()
+            }
+        })
     }
     
     func configureCell(post: Post, image: UIImage? = nil) {
         self.post = post
         self.postTextView.text = post.caption
         self.likesLabel.text = String(post.likes)
+        
+        self.likesRef = DataService.ds.currentUserRef.child("likes").child(self.post.postKey)
         
         if image != nil {
             self.postImage.image = image
@@ -46,6 +69,13 @@ class PostTableViewCell: UITableViewCell {
                 }
             })
         }
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+                self.likeImage.image = #imageLiteral(resourceName: "empty-heart")
+            } else {
+                self.likeImage.image = #imageLiteral(resourceName: "filled-heart")
+            }
+        })
     }
 
 }

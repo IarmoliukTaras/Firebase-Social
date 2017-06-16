@@ -328,6 +328,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likeImage" destination="Myi-Io-TYG" id="e4f-cK-eI7"/>
                                             <outlet property="likesLabel" destination="ydf-mi-3nk" id="Fch-2e-eHM"/>
                                             <outlet property="postImage" destination="nzL-EB-Bud" id="PM1-Df-IZL"/>
                                             <outlet property="postTextView" destination="Nbe-WL-5nv" id="Vhh-zm-BVp"/>
