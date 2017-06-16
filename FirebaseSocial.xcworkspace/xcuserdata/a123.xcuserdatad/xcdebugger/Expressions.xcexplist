@@ -3,6 +3,25 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "FeedVC.(postButtonTapped(Any) -&gt; ()).(closure #1):FeedVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "metaData.downloadURL()?">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Post.imageUrl.getter:Post.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Post.init(postKey : String, postData : [String : AnyObject]) -&gt; Post:Post.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "postData[&quot;imageURl&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SignInVC.viewDidLoad() -&gt; ():SignInVC.swift">
          <PersistentStrings>
             <PersistentString
